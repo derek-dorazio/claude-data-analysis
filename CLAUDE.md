@@ -14,7 +14,7 @@ data-analysis/
     └── <domain>/
         └── <use-case>/
             ├── input/    # CSV, Excel, JSON data files
-            ├── output/   # plan/, analysis/, explore/, data/, reports/
+            ├── output/   # Timestamped run folders: <name>-YYYY-MM-DD-HHMMSS/
             ├── queries/  # Predefined query definitions (.md)
             └── tests/    # Test cases with expected results
 ```
@@ -43,7 +43,7 @@ Each use case is a self-contained folder under `use-cases/<domain>/<name>/` with
 
 - `/explore` — Fast data profiling without a full plan
 - `/query` — Ask a natural-language question about your data
-- `/export` — Convert analysis results to Excel, CSV, or markdown
+- `/export` — Convert analysis results to Excel, CSV, markdown, and PDF (all by default)
 
 ## Skills
 
@@ -56,7 +56,8 @@ Each use case is a self-contained folder under `use-cases/<domain>/<name>/` with
 
 ## Conventions
 
-- **File naming**: `YYYY-MM-DD-<slug>.<ext>` for all output
+- **Output folders**: Each command run creates `output/<use-case-name>-YYYY-MM-DD-HHMMSS/`
+- **File naming**: `YYYY-MM-DD-<slug>.<ext>` for files within run folders
 - **Python**: Use pandas for data manipulation; scripts are ephemeral
 - **Reports**: Markdown format with tables
 - **Use case paths**: Always `use-cases/<domain>/<name>/`
@@ -67,12 +68,13 @@ Each use case is a self-contained folder under `use-cases/<domain>/<name>/` with
 - **Bash** — run Python/pandas scripts, shell commands
 - **MCP: excel** — read/write Excel workbooks directly
 - **MCP: filesystem** — enhanced file operations
+- **mdpdf** — markdown-to-PDF conversion (`mdpdf -o output.pdf input.md`)
 
 ## Important Notes
 
 - Always read and profile input data before proposing joins or analysis
 - Validate join keys exist and check cardinality before joining
 - Preserve original input files — never modify files in `input/`
-- All output goes to the use case's `output/` subdirectory
+- All output goes to timestamped run folders under the use case's `output/` directory
 - Queries in `queries/` define reusable, testable analysis objectives
 - Tests in `tests/` provide expected results for validation

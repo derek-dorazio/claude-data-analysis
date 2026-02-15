@@ -21,12 +21,12 @@ Every use case follows this layout:
 ```
 use-cases/<domain>/<use-case-name>/
 ├── input/              # Source data files (CSV, Excel, JSON)
-├── output/             # Generated output
-│   ├── plan/           #   Analysis plans
-│   ├── analysis/       #   Full reports
-│   ├── explore/        #   Data profiles
-│   ├── data/           #   Exported data (Excel, CSV)
-│   └── reports/        #   Query results and summaries
+├── output/             # Generated output — timestamped run folders
+│   └── <name>-YYYY-MM-DD-HHMMSS/   # One folder per command run
+│       ├── *.md        #   Markdown reports and plans
+│       ├── *.csv       #   Data exports
+│       ├── *.xlsx      #   Excel exports
+│       └── *.pdf       #   PDF reports
 ├── queries/            # Predefined query definitions (.md)
 ├── tests/              # Test cases with expected results
 └── data-dictionary.md  # Schema contract for input files

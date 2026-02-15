@@ -8,7 +8,7 @@ This may include a use case name/path or a specific plan file.
 
 ## Instructions
 
-1. **Find the plan**: Search `use-cases/*/*/output/plan/` for the most recent `.md` plan file (by date prefix). Read it fully. If the user specified a use case or plan file in their arguments, narrow the search accordingly. The plan file contains a **Use case** field — use that to resolve `USE_CASE_DIR`.
+1. **Find the plan**: Search `use-cases/*/*/output/` for the most recent plan file (`*-plan.md`) across all run subfolders. Check both the new run folder pattern (`output/<name>-YYYY-MM-DD-HHMMSS/`) and legacy paths (`output/plan/`). Read it fully. If the user specified a use case or plan file in their arguments, narrow the search accordingly. The plan file contains a **Use case** field — use that to resolve `USE_CASE_DIR`.
 
 2. **Set up the Python environment**: Verify pandas is available. If additional libraries are needed (openpyxl for Excel, etc.), install them:
    ```
@@ -76,11 +76,17 @@ This may include a use case name/path or a specific plan file.
    - Full statistical summaries if relevant
    ```
 
-8. **Save outputs**:
-   - Report → `<USE_CASE_DIR>/output/analysis/YYYY-MM-DD-<topic-slug>-report.md`
-   - Any generated data files → `<USE_CASE_DIR>/output/data/YYYY-MM-DD-<topic-slug>.<ext>`
+8. **Create the run folder**: Create a timestamped subfolder for this implementation run:
+   ```
+   <USE_CASE_DIR>/output/<use-case-name>-YYYY-MM-DD-HHMMSS/
+   ```
+   Use the use case's short name (e.g., `district-leads`) and current datetime. Set `RUN_DIR` to this path.
 
-9. Tell the user the analysis is complete and summarize the key findings.
+9. **Save outputs** — all files go into the run folder:
+   - Report → `<RUN_DIR>/YYYY-MM-DD-<topic-slug>-report.md`
+   - Any generated data files → `<RUN_DIR>/YYYY-MM-DD-<topic-slug>.<ext>`
+
+10. Tell the user the analysis is complete, show the run folder path, and summarize the key findings.
 
 ## Important
 

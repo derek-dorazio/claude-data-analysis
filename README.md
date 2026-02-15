@@ -65,15 +65,16 @@ claude
 
 ### Step 4: Review Results
 
-Output files are saved under the use case's `output/` folder:
+Each command run creates a timestamped subfolder under `output/`:
 
 ```
 use-cases/hr/pto-analysis/output/
-├── plan/       # Analysis plans
-├── analysis/   # Full reports
-├── explore/    # Data profiles
-├── data/       # Exported Excel/CSV
-└── reports/    # Query results
+└── pto-analysis-2025-02-15-143022/    # One folder per run
+    ├── 2025-02-15-pto-analysis-report.md
+    ├── 2025-02-15-pto-analysis-report.pdf
+    ├── 2025-02-15-query-1-pto-during-leave.csv
+    ├── 2025-02-15-query-2-low-pto-usage.csv
+    └── 2025-02-15-pto-analysis.xlsx
 ```
 
 ### Adding a New Query
@@ -94,7 +95,7 @@ See `templates/query-template.md` for the standard format.
 | `/plan <use-case> <description>` | Create a structured analysis plan | Starting a full analysis |
 | `/implement [use-case]` | Execute the most recent plan | After reviewing a plan |
 | `/query <use-case> <question>` | Answer a specific question | Quick one-off analysis |
-| `/export <use-case> <format>` | Export results to Excel, CSV, or markdown | Sharing results |
+| `/export <use-case> [format]` | Export results to Excel, CSV, markdown, and PDF (default: all) | Sharing results |
 
 ### Workflow
 
@@ -223,7 +224,7 @@ data-analysis/
     ├── hr/
     │   └── pto-analysis/
     │       ├── input/           # employee-pto.csv, long-term-leave.csv
-    │       ├── output/          # plan/, analysis/, explore/, data/, reports/
+    │       ├── output/          # Timestamped run folders
     │       ├── queries/         # query-1-pto-during-leave.md, query-2-low-pto-usage.md
     │       ├── tests/           # test-cases.md
     │       └── data-dictionary.md

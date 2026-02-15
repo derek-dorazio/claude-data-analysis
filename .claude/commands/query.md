@@ -28,7 +28,10 @@ The user's question (and optionally which use case): $ARGUMENTS
    - Supporting data (formatted table if applicable)
    - The Python code used (so the user can verify/reuse)
 
-8. **Save** (optional): If the result is substantial, save to `<USE_CASE_DIR>/output/reports/YYYY-MM-DD-query-<slug>.md`
+8. **Save** (optional): If the result is substantial, create a timestamped run subfolder and save there:
+   ```
+   <USE_CASE_DIR>/output/<use-case-name>-YYYY-MM-DD-HHMMSS/YYYY-MM-DD-query-<slug>.md
+   ```
 
 ## Important
 

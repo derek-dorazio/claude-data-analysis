@@ -56,7 +56,10 @@ Use case and optional file name or focus: $ARGUMENTS
    - Compare value overlap in potential join keys
    - Note compatible vs. incompatible types
 
-6. **Save** to `<USE_CASE_DIR>/output/explore/YYYY-MM-DD-<slug>-profile.md`
+6. **Save**: Create a timestamped run subfolder and save there:
+   ```
+   <USE_CASE_DIR>/output/<use-case-name>-YYYY-MM-DD-HHMMSS/YYYY-MM-DD-<slug>-profile.md
+   ```
 
 ## Important
 

@@ -65,7 +65,10 @@ This should include or reference a use case path under `use-cases/` (e.g., `hr/p
    - Tables, charts, summaries, or export files to produce
    ```
 
-8. **Save the plan** to `<USE_CASE_DIR>/output/plan/YYYY-MM-DD-<topic-slug>.md`
+8. **Save the plan**: Create a timestamped run subfolder and save there:
+   ```
+   <USE_CASE_DIR>/output/<use-case-name>-YYYY-MM-DD-HHMMSS/YYYY-MM-DD-<topic-slug>-plan.md
+   ```
 
 9. Tell the user the plan is ready for review and they can run `/implement` to execute it.
 
