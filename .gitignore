@@ -1,0 +1,25 @@
+# Claude Code settings (local/personal)
+.claude/settings/
+
+# OS files
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Keep output directory structure but ignore generated content
+output/plan/*.md
+output/analysis/*.md
+output/explore/*.md
+output/data/*
+output/reports/*.md
+!output/**/.gitkeep
+
+# Large data files that may end up in root
+*.csv
+*.xlsx
+*.xls
+*.jsonl

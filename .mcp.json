@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "excel": {
+      "command": "uvx",
+      "args": ["excel-mcp-server"],
+      "env": {}
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@anthropic/mcp-filesystem-server",
+        "./input",
+        "./output"
+      ],
+      "env": {}
+    }
+  }
+}
