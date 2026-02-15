@@ -1,0 +1,7 @@
+employeeNumber,firstname,lastname,department,startDate,endDate,leaveEnum
+1005,Emily,Rodriguez,HR,2025-04-01,2025-06-30,maternity
+1006,David,Kim,Finance,2025-06-01,2025-08-31,health
+1008,Tom,Wilson,Engineering,2025-06-01,2025-07-31,mental health
+1009,Lisa,Nakamura,HR,2025-01-13,2025-04-13,safe leave
+1011,Angela,Brooks,Engineering,2025-02-01,2025-05-31,jury duty
+1003,Priya,Patel,Finance,2025-09-15,2025-12-15,paternity

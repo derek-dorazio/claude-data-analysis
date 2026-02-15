@@ -18,8 +18,8 @@ output/data/*
 output/reports/*.md
 !output/**/.gitkeep
 
-# Large data files that may end up in root
-*.csv
-*.xlsx
-*.xls
-*.jsonl
+# Large data files in root (input/ files are tracked)
+/*.csv
+/*.xlsx
+/*.xls
+/*.jsonl
