@@ -26,6 +26,7 @@ Each use case is a self-contained folder under `use-cases/<domain>/<name>/` with
 ### Current Use Cases
 
 - `use-cases/hr/pto-analysis` — PTO and long-term leave analysis
+- `use-cases/sales/district-leads` — Sales pipeline scoring, ranking, and opportunity analysis
 
 ## Supported Input Formats
 
