@@ -1,0 +1,21 @@
+opportunityId,districtId,products,amount,salesStage,probability,hasIncumbent,incumbentProduct,incumbentContractEnd,assignedRep,lastActivityDate,createdDate,notes
+OPP-001,D002,i-Ready Math;i-Ready Reading,485000,Negotiation,80,Yes,Renaissance Star,2025-08-01,Maria Santos,2025-02-10,2024-09-15,Incumbent contract expiring summer. Strong champion in curriculum director.
+OPP-002,D006,i-Ready Math,920000,Proposal,55,Yes,NWEA MAP,2026-06-30,James Park,2025-02-08,2024-11-01,Largest opportunity. Incumbent entrenched but exploring alternatives for next year.
+OPP-003,D014,i-Ready Reading;Magnetic Reading,310000,Demo,60,No,,,Kevin O'Neill,2025-02-12,2025-01-10,High Title I district with no current solution. Federal funding available.
+OPP-004,D007,i-Ready Math;i-Ready Reading,275000,Proposal,70,Yes,Achieve3000,2025-07-15,Maria Santos,2025-02-05,2024-10-20,Expiring contract. Budget approved for next FY. Decision by March.
+OPP-005,D001,i-Ready Math,125000,Qualified,30,Yes,IXL Math,2027-06-30,Sarah Lin,2025-01-20,2025-01-05,Incumbent contract not expiring soon. Teacher interest but no admin champion.
+OPP-006,D008,i-Ready Reading,340000,Demo,50,Yes,Lexia PowerUp,2025-09-01,James Park,2025-02-01,2024-12-10,Demo scheduled for March. Incumbent contract ending. Competing with Amplify.
+OPP-007,D013,i-Ready Math;i-Ready Reading,780000,Prospect,15,Yes,Curriculum Associates i-Ready,,Sarah Lin,2025-01-28,2025-01-28,Existing customer renewal at risk. Evaluating competitors. Need retention strategy.
+OPP-008,D003,Magnetic Reading,52000,Negotiation,85,No,,,Kevin O'Neill,2025-02-11,2024-08-20,Small rural district. No incumbent. PO expected by end of month. Title I funded.
+OPP-009,D009,i-Ready Math,245000,Proposal,65,No,,,Maria Santos,2025-02-06,2024-11-15,No incumbent. Strong principal support. Board approval needed in April.
+OPP-010,D004,i-Ready Math;i-Ready Reading,180000,Demo,40,Yes,DreamBox,2026-01-31,Sarah Lin,2025-02-03,2024-12-01,Incumbent has another year. District willing to dual-run if pricing works.
+OPP-011,D012,i-Ready Reading,210000,Qualified,25,Yes,Achieve3000,2027-08-01,Kevin O'Neill,2024-12-15,2024-11-01,Early conversations. Incumbent deeply embedded. Long sales cycle expected.
+OPP-012,D005,i-Ready Math;Magnetic Reading,78000,Closed Won,100,No,,,Kevin O'Neill,2025-01-31,2024-06-15,Signed! Title I funded. Implementation starting February.
+OPP-013,D010,i-Ready Reading,145000,Demo,45,No,,,James Park,2025-02-09,2025-01-08,No incumbent. Curriculum committee reviewing in spring. Good fit but slow process.
+OPP-014,D011,Magnetic Reading,28000,Proposal,75,No,,,Kevin O'Neill,2025-02-07,2024-10-01,Small district but high probability. Superintendent is a champion. Budget confirmed.
+OPP-015,D002,Magnetic Reading,95000,Qualified,35,No,,,Maria Santos,2025-01-15,2025-01-10,Cross-sell to existing prospect D002. Separate budget from OPP-001.
+OPP-016,D006,i-Ready Reading,750000,Prospect,10,Yes,Amplify CKLA,2027-06-30,James Park,2024-11-20,2024-11-20,Incumbent entrenched with 3-year contract. Relationship building only.
+OPP-017,D014,i-Ready Math,280000,Qualified,40,No,,,Kevin O'Neill,2025-02-13,2025-02-01,Follow-on to OPP-003 if reading pilot succeeds. Math need identified. No budget yet.
+OPP-018,D009,i-Ready Reading;Magnetic Reading,190000,Prospect,20,Yes,McGraw-Hill Wonders,2025-12-31,Maria Santos,2025-01-22,2025-01-15,Curriculum review cycle starting fall. Incumbent contract expiring Dec. Plant seeds now.
+OPP-019,D015,i-Ready Math;i-Ready Reading,285000,Demo,55,Yes,Renaissance Star,2025-10-01,Sarah Lin,2025-02-04,2024-12-20,Incumbent contract expiring fall. District open to change. Strong demo feedback.
+OPP-020,D013,Magnetic Reading,165000,Closed Lost,0,No,,,Sarah Lin,2025-01-15,2024-07-01,Lost to Amplify on pricing. District chose 1-year contract. Revisit next cycle.

@@ -1,0 +1,16 @@
+districtId,districtName,state,enrollment,numSchools,urbanicity,title1Pct
+D001,Springfield Unified,IL,28500,42,Suburban,38
+D002,Riverside County Schools,CA,64000,85,Urban,52
+D003,Pine Valley ISD,TX,8200,12,Rural,61
+D004,Lakewood Public Schools,OH,15400,22,Suburban,44
+D005,Magnolia Parish Schools,LA,6100,9,Rural,72
+D006,Fairfax County Schools,VA,187000,198,Suburban,28
+D007,Brooklyn Community District 14,NY,31200,38,Urban,65
+D008,Mesa Unified,AZ,62000,83,Suburban,47
+D009,Charleston County Schools,SC,49000,54,Urban,41
+D010,Boise Independent District,ID,25800,47,Suburban,31
+D011,Greenfield Central Schools,IN,4300,6,Rural,55
+D012,Portland Public Schools,OR,45000,81,Urban,39
+D013,Wake County Schools,NC,162000,191,Suburban,33
+D014,Detroit City Schools,MI,51000,106,Urban,78
+D015,Anchorage School District,AK,42000,65,Suburban,36
