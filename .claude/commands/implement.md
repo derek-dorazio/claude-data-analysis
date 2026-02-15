@@ -4,9 +4,11 @@ You are a data analyst executing a structured analysis plan.
 
 Optional user guidance or overrides: $ARGUMENTS
 
+This may include a use case name/path or a specific plan file.
+
 ## Instructions
 
-1. **Find the plan**: Look in `output/plan/` for the most recent `.md` plan file (by date prefix). Read it fully. If the user specified a plan file name in their arguments, use that instead.
+1. **Find the plan**: Search `use-cases/*/*/output/plan/` for the most recent `.md` plan file (by date prefix). Read it fully. If the user specified a use case or plan file in their arguments, narrow the search accordingly. The plan file contains a **Use case** field — use that to resolve `USE_CASE_DIR`.
 
 2. **Set up the Python environment**: Verify pandas is available. If additional libraries are needed (openpyxl for Excel, etc.), install them:
    ```
@@ -14,7 +16,7 @@ Optional user guidance or overrides: $ARGUMENTS
    ```
    If not available, run: `pip3 install pandas openpyxl xlrd`
 
-3. **Load the data**: For each input file listed in the plan, write and execute Python code to load it:
+3. **Load the data**: For each input file listed in the plan (paths relative to `USE_CASE_DIR`), write and execute Python code to load it:
    - CSV: `pd.read_csv()` with appropriate delimiter detection
    - Excel: `pd.read_excel()` specifying sheet names as needed
    - JSON: `pd.read_json()` or `pd.json_normalize()` for nested data
@@ -38,12 +40,15 @@ Optional user guidance or overrides: $ARGUMENTS
    - Write and run Python code to compute the analysis
    - Print results as formatted tables (use `df.to_markdown()` or `df.to_string()`)
    - Capture key findings and insights
+   - If query definitions exist in `<USE_CASE_DIR>/queries/`, execute each query
+   - If test cases exist in `<USE_CASE_DIR>/tests/`, validate results against expected values
 
 7. **Compile the report**: Create a markdown report with:
 
    ```markdown
    # Analysis Report: <title from plan>
    **Date**: YYYY-MM-DD
+   **Use case**: <USE_CASE_DIR>
    **Plan**: link to plan file
    **Input files**: list with final row counts used
 
@@ -60,6 +65,9 @@ Optional user guidance or overrides: $ARGUMENTS
    ### <Objective 2 title>
    ...
 
+   ## Test Case Validation
+   (if test cases exist) Pass/fail for each expected result
+
    ## Data Quality Notes
    Issues encountered and how they were handled
 
@@ -69,17 +77,16 @@ Optional user guidance or overrides: $ARGUMENTS
    ```
 
 8. **Save outputs**:
-   - Report → `output/analysis/YYYY-MM-DD-<topic-slug>-report.md`
-   - Any generated data files → `output/data/YYYY-MM-DD-<topic-slug>.<ext>`
+   - Report → `<USE_CASE_DIR>/output/analysis/YYYY-MM-DD-<topic-slug>-report.md`
+   - Any generated data files → `<USE_CASE_DIR>/output/data/YYYY-MM-DD-<topic-slug>.<ext>`
 
 9. Tell the user the analysis is complete and summarize the key findings.
 
 ## Important
 
+- All input/output paths are relative to the use case directory
 - Run Python code in small, incremental steps — load, then clean, then join, then analyze
 - Print intermediate results so issues are caught early
 - If a step fails, diagnose the error and adjust — do not skip steps
-- Keep all analysis reproducible: each Python snippet should be self-contained or build clearly on prior steps
 - Use `print(df.to_markdown(index=False))` for clean table output when possible
-- If the joined dataset is very large, use aggregations rather than printing raw data
-- Never modify files in `input/` — all outputs go to `output/`
+- Never modify files in `input/` — all outputs go to `<USE_CASE_DIR>/output/`

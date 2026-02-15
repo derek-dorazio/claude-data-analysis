@@ -10,8 +10,7 @@
       "args": [
         "-y",
         "@anthropic/mcp-filesystem-server",
-        "./input",
-        "./output"
+        "./use-cases"
       ],
       "env": {}
     }

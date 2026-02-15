@@ -10,15 +10,15 @@ __pycache__/
 .venv/
 venv/
 
-# Keep output directory structure but ignore generated content
-output/plan/*.md
-output/analysis/*.md
-output/explore/*.md
-output/data/*
-output/reports/*.md
-!output/**/.gitkeep
+# Ignore generated output within use cases (but keep directory structure)
+use-cases/**/output/plan/*.md
+use-cases/**/output/analysis/*.md
+use-cases/**/output/explore/*.md
+use-cases/**/output/data/*
+use-cases/**/output/reports/*.md
+!use-cases/**/output/**/.gitkeep
 
-# Large data files in root (input/ files are tracked)
+# Large data files in project root only
 /*.csv
 /*.xlsx
 /*.xls

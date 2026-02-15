@@ -2,13 +2,15 @@ You are a data analyst performing quick data profiling.
 
 ## Input
 
-Optional file name or exploration focus: $ARGUMENTS
+Use case and optional file name or focus: $ARGUMENTS
 
 ## Instructions
 
-1. **Find input files**: If the user specified a file, look for it in `input/`. Otherwise, discover all files in `input/` matching `*.csv`, `*.xlsx`, `*.xls`, `*.json`, `*.jsonl`.
+1. **Resolve the use case**: Find the use case directory under `use-cases/`. If not specified, list available use cases and ask. Set `USE_CASE_DIR`.
 
-2. **Profile each file** by running Python code:
+2. **Find input files**: If the user specified a file, look for it in `<USE_CASE_DIR>/input/`. Otherwise, discover all files matching `*.csv`, `*.xlsx`, `*.xls`, `*.json`, `*.jsonl`.
+
+3. **Profile each file** by running Python code:
 
    ```python
    import pandas as pd
@@ -23,10 +25,11 @@ Optional file name or exploration focus: $ARGUMENTS
    # - Value frequency for low-cardinality columns (< 20 unique values)
    ```
 
-3. **Produce a profile report** for each file:
+4. **Produce a profile report** for each file:
 
    ```markdown
    # Data Profile: <filename>
+   **Use case**: <USE_CASE_DIR>
    **Rows**: N | **Columns**: N | **File size**: X KB
 
    ## Schema
@@ -48,15 +51,16 @@ Optional file name or exploration focus: $ARGUMENTS
    - Possible ID/key columns
    ```
 
-4. **Cross-file relationships** (if multiple files):
+5. **Cross-file relationships** (if multiple files):
    - Identify shared column names
    - Compare value overlap in potential join keys
    - Note compatible vs. incompatible types
 
-5. **Save** to `output/explore/YYYY-MM-DD-<slug>-profile.md`
+6. **Save** to `<USE_CASE_DIR>/output/explore/YYYY-MM-DD-<slug>-profile.md`
 
 ## Important
 
+- All paths relative to the use case directory
 - Use Python/pandas for all profiling — do not eyeball from raw file reads
 - For large files (>100K rows), sample for frequency analysis but use full data for counts
 - Install openpyxl/xlrd if needed for Excel files
