@@ -13,6 +13,7 @@ This project supports two types of users:
 
 - [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code)
 - Python 3.8+ with pandas (`pip3 install pandas openpyxl xlrd`)
+- weasyprint for HTML-to-PDF (`pip3 install weasyprint`)
 - [uv](https://docs.astral.sh/uv/) for MCP servers (`brew install uv`)
 - Node.js/npm (for filesystem MCP server)
 
@@ -71,6 +72,7 @@ Each command run creates a timestamped subfolder under `output/`:
 use-cases/hr/pto-analysis/output/
 └── pto-analysis-2025-02-15-143022/    # One folder per run
     ├── 2025-02-15-pto-analysis-report.md
+    ├── 2025-02-15-pto-analysis-report.html
     ├── 2025-02-15-pto-analysis-report.pdf
     ├── 2025-02-15-query-1-pto-during-leave.csv
     ├── 2025-02-15-query-2-low-pto-usage.csv
@@ -95,7 +97,7 @@ See `templates/query-template.md` for the standard format.
 | `/plan <use-case> <description>` | Create a structured analysis plan | Starting a full analysis |
 | `/implement [use-case]` | Execute the most recent plan | After reviewing a plan |
 | `/query <use-case> <question>` | Answer a specific question | Quick one-off analysis |
-| `/export <use-case> [format]` | Export results to Excel, CSV, markdown, and PDF (default: all) | Sharing results |
+| `/export <use-case> [format]` | Export results to Excel, CSV, markdown, HTML, and PDF (default: all) | Sharing results |
 
 ### Workflow
 
@@ -213,9 +215,11 @@ data-analysis/
 ├── skills/                  # Reusable analysis prompts
 ├── scripts/
 │   ├── new-use-case.sh      # Scaffold a new use case
+│   ├── md-to-html.py        # Markdown to HTML/PDF converter
 │   ├── list-output.sh       # List output files
 │   └── clean-output.sh      # Clean old output
-├── templates/               # Starter files for new use cases
+├── templates/               # Starter files and report templates
+│   ├── report.html          # i-Ready branded HTML report template
 │   ├── query-template.md
 │   ├── test-cases-template.md
 │   └── data-dictionary-template.md

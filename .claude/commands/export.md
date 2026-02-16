@@ -18,7 +18,7 @@ This may include a use case name/path, a source file, and a target format.
 
 3. **Find the source**: The user may specify:
    - A source file to export (from a previous run folder, or from `<USE_CASE_DIR>/output/`)
-   - A target format: `excel`, `csv`, `markdown`, `pdf`, or `all`
+   - A target format: `excel`, `csv`, `markdown`, `html`, `pdf`, or `all`
    - **Default format is `all`** — if no format is specified, export all formats
    - If no source specified, use the most recent analysis output in the use case
 
@@ -45,16 +45,28 @@ This may include a use case name/path, a source file, and a target format.
 2. Format as clean markdown tables
 3. Save to `<RUN_DIR>/YYYY-MM-DD-<slug>.md`
 
-### Export to PDF (`pdf`)
+### Export to HTML (`html`)
 1. Read the source markdown report (or generate markdown from data first)
-2. Generate PDF using `mdpdf` via Bash:
+2. Convert to styled HTML using the report template:
+   ```
+   python3 scripts/md-to-html.py "<source-markdown-file>" "<RUN_DIR>/YYYY-MM-DD-<slug>.html"
+   ```
+3. The script uses `templates/report.html` as the template (i-Ready branded styling)
+
+### Export to PDF (`pdf`)
+1. Requires an HTML file — generate HTML first if it doesn't exist
+2. Convert HTML to PDF using the report template and weasyprint:
+   ```
+   python3 scripts/md-to-html.py "<source-markdown-file>" "<RUN_DIR>/YYYY-MM-DD-<slug>.html" --pdf "<RUN_DIR>/YYYY-MM-DD-<slug>.pdf"
+   ```
+3. Verify the PDF was created and has non-zero size
+4. **Fallback**: If weasyprint is not installed, use `mdpdf`:
    ```
    mdpdf -o "<RUN_DIR>/YYYY-MM-DD-<slug>.pdf" "<source-markdown-file>"
    ```
-3. Verify the PDF was created and has non-zero size
 
 ### Export All (`all`) — **this is the default**
-Run all applicable export formats (excel, csv, markdown, pdf).
+Run all applicable export formats (excel, csv, markdown, html, pdf).
 
 ## Important
 

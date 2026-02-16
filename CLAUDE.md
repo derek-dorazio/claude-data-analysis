@@ -43,7 +43,7 @@ Each use case is a self-contained folder under `use-cases/<domain>/<name>/` with
 
 - `/explore` — Fast data profiling without a full plan
 - `/query` — Ask a natural-language question about your data
-- `/export` — Convert analysis results to Excel, CSV, markdown, and PDF (all by default)
+- `/export` — Convert analysis results to Excel, CSV, markdown, HTML, and PDF (all by default)
 
 ## Skills
 
@@ -59,7 +59,7 @@ Each use case is a self-contained folder under `use-cases/<domain>/<name>/` with
 - **Output folders**: Each command run creates `output/<use-case-name>-YYYY-MM-DD-HHMMSS/`
 - **File naming**: `YYYY-MM-DD-<slug>.<ext>` for files within run folders
 - **Python**: Use pandas for data manipulation; scripts are ephemeral
-- **Reports**: Markdown format with tables
+- **Reports**: Markdown format with tables; HTML reports use `templates/report.html`
 - **Use case paths**: Always `use-cases/<domain>/<name>/`
 
 ## Tools Available
@@ -68,7 +68,9 @@ Each use case is a self-contained folder under `use-cases/<domain>/<name>/` with
 - **Bash** — run Python/pandas scripts, shell commands
 - **MCP: excel** — read/write Excel workbooks directly
 - **MCP: filesystem** — enhanced file operations
-- **mdpdf** — markdown-to-PDF conversion (`mdpdf -o output.pdf input.md`)
+- **md-to-html.py** — markdown-to-HTML/PDF conversion (`python3 scripts/md-to-html.py input.md output.html [--pdf output.pdf]`)
+- **weasyprint** — HTML-to-PDF engine (used by md-to-html.py)
+- **mdpdf** — markdown-to-PDF fallback (`mdpdf -o output.pdf input.md`)
 
 ## Important Notes
 
