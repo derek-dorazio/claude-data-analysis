@@ -70,7 +70,8 @@ Each command run creates a timestamped subfolder under `output/`:
 
 ```
 use-cases/hr/pto-analysis/output/
-└── pto-analysis-2025-02-15-143022/    # One folder per run
+├── pto-analysis-2025-02-15-143022.zip  # Zip archive (default)
+└── pto-analysis-2025-02-15-143022/     # Run folder (also kept)
     ├── 2025-02-15-pto-analysis-report.md
     ├── 2025-02-15-pto-analysis-report.html
     ├── 2025-02-15-pto-analysis-report.pdf
@@ -97,7 +98,7 @@ See `templates/query-template.md` for the standard format.
 | `/plan <use-case> <description>` | Create a structured analysis plan | Starting a full analysis |
 | `/implement [use-case]` | Execute the most recent plan | After reviewing a plan |
 | `/query <use-case> <question>` | Answer a specific question | Quick one-off analysis |
-| `/export <use-case> [format]` | Export results to Excel, CSV, markdown, HTML, and PDF (default: all) | Sharing results |
+| `/export <use-case> [format]` | Export results to Excel, CSV, markdown, HTML, and PDF; zipped by default (`--no-zip` to skip) | Sharing results |
 
 ### Workflow
 

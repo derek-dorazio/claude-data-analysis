@@ -68,9 +68,19 @@ This may include a use case name/path, a source file, and a target format.
 ### Export All (`all`) — **this is the default**
 Run all applicable export formats (excel, csv, markdown, html, pdf).
 
+### Zip packaging — **on by default**
+After all exports are generated, create a zip archive of the run folder:
+```
+cd "<USE_CASE_DIR>/output" && zip -r "<run-folder-name>.zip" "<run-folder-name>/"
+```
+- The zip file is saved alongside the run folder at `<USE_CASE_DIR>/output/<run-folder-name>.zip`
+- If the user specifies `--no-zip`, skip this step and leave files unzipped
+- The run folder is kept in place (not deleted) so individual files remain accessible
+
 ## Important
 
 - All output files go into the run folder (`<RUN_DIR>`)
 - If the source contains multiple tables, export all of them
 - Preserve data types and formatting during export
+- After zipping, confirm the zip file path and size with the user
 - Confirm the run folder path and all output file paths with the user when done

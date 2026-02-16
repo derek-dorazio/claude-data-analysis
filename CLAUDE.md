@@ -43,7 +43,7 @@ Each use case is a self-contained folder under `use-cases/<domain>/<name>/` with
 
 - `/explore` — Fast data profiling without a full plan
 - `/query` — Ask a natural-language question about your data
-- `/export` — Convert analysis results to Excel, CSV, markdown, HTML, and PDF (all by default)
+- `/export` — Convert analysis results to Excel, CSV, markdown, HTML, and PDF; zipped by default
 
 ## Skills
 
