@@ -11,12 +11,8 @@ __pycache__/
 venv/
 
 # Ignore generated output within use cases (but keep directory structure)
-use-cases/**/output/plan/*.md
-use-cases/**/output/analysis/*.md
-use-cases/**/output/explore/*.md
-use-cases/**/output/data/*
-use-cases/**/output/reports/*.md
-!use-cases/**/output/**/.gitkeep
+use-cases/**/output/*/
+!use-cases/**/output/.gitkeep
 
 # Large data files in project root only
 /*.csv

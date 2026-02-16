@@ -8,7 +8,7 @@ This may include a use case name/path or a specific plan file.
 
 ## Instructions
 
-1. **Find the plan**: Search `use-cases/*/*/output/` for the most recent plan file (`*-plan.md`) across all run subfolders. Check both the new run folder pattern (`output/<name>-YYYY-MM-DD-HHMMSS/`) and legacy paths (`output/plan/`). Read it fully. If the user specified a use case or plan file in their arguments, narrow the search accordingly. The plan file contains a **Use case** field — use that to resolve `USE_CASE_DIR`.
+1. **Find the plan**: Search `use-cases/*/*/output/` for the most recent plan file (`*-plan.md`) across all run subfolders (`output/<name>-YYYY-MM-DD-HHMMSS/`). Read it fully. If the user specified a use case or plan file in their arguments, narrow the search accordingly. The plan file contains a **Use case** field — use that to resolve `USE_CASE_DIR`.
 
 2. **Set up the Python environment**: Verify pandas is available. If additional libraries are needed (openpyxl for Excel, etc.), install them:
    ```

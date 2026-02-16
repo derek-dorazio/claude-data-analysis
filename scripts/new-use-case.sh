@@ -27,10 +27,10 @@ fi
 echo "Creating use case: $DOMAIN/$NAME"
 
 # Create directory structure
-mkdir -p "$UC_DIR"/{input,output/{plan,analysis,explore,data,reports},queries,tests}
+mkdir -p "$UC_DIR"/{input,output,queries,tests}
 
-# Create .gitkeep files for empty output dirs
-touch "$UC_DIR"/output/{plan,analysis,explore,data,reports}/.gitkeep
+# Create .gitkeep for empty output dir
+touch "$UC_DIR"/output/.gitkeep
 
 # Copy templates as starter files
 TMPL_DIR="$PROJECT_DIR/templates"
@@ -64,7 +64,7 @@ echo ""
 echo "Directory structure:"
 echo "  use-cases/$DOMAIN/$NAME/"
 echo "  ├── input/              <- Put your data files here"
-echo "  ├── output/             <- Generated output (plan, analysis, explore, data, reports)"
+echo "  ├── output/             <- Generated output (timestamped run folders)"
 echo "  ├── queries/            <- Define your query .md files here"
 echo "  ├── tests/              <- Add test cases here"
 echo "  ├── data-dictionary.md  <- Document your input file schemas"
