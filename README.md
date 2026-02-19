@@ -100,6 +100,8 @@ See `templates/query-template.md` for the standard format.
 | `/query <use-case> <question>` | Answer a specific question | Quick one-off analysis |
 | `/export <use-case> [format]` | Export results to Excel, CSV, markdown, HTML, and PDF; zipped by default (`--no-zip` to skip) | Sharing results |
 
+For more information, see [.claude/commands/README.md](.claude/commands/README.md).
+
 ### Workflow
 
 ```
@@ -249,7 +251,7 @@ data-analysis/
 | hr | pto-analysis | 2 files, 12 employees | 2 queries | PTO error detection and usage tracking |
 | sales | district-leads | 2 files, 15 districts, 20 opportunities | 4 queries + scoring heuristic | Sales pipeline ranking and analysis |
 
-See [use-cases/README.md](use-cases/README.md) for full details on each.
+For more information, see [use-cases/README.md](use-cases/README.md).
 
 ## Input Formats
 
@@ -277,6 +279,8 @@ Reusable analysis prompts in `skills/`:
 | `join-strategy` | Identify join keys, relationship types, cardinality |
 | `detect-anomalies` | Outliers, unexpected values, data quality issues |
 | `summarize-stats` | Descriptive statistics, aggregations, group-by summaries |
+
+For more information, see [skills/README.md](skills/README.md).
 
 ## Helper Scripts
 
